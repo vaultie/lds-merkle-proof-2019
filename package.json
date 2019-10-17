@@ -1,0 +1,16 @@
+{
+  "name": "lds-merkle-proof-2019",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "multibase": "^0.6.0",
+    "cbor": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vaultie Inc.",
+  "license": "MIT"
+}
