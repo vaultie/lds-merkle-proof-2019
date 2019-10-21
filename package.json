@@ -1,6 +1,6 @@
 {
   "name": "@vaultie/lds-merkle-proof-2019",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LDS Merkle Proof 2019 signature suite tools",
   "main": "src/index.js",
   "dependencies": {
