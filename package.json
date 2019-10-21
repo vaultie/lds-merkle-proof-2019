@@ -1,8 +1,13 @@
 {
   "name": "@vaultie/lds-merkle-proof-2019",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "LDS Merkle Proof 2019 signature suite tools",
   "keywords": ["lds-merkle-proof-2019", "verifiable credentials", "merkle-proof"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaultie/lds-merkle-proof-2019.git"
+  },
+  "homepage": "https://github.com/vaultie/lds-merkle-proof-2019",
   "main": "src/index.js",
   "dependencies": {
     "ajv": "^6.10.2",
