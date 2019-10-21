@@ -28,7 +28,7 @@ To decode base58 proofValue:
 
 ```
 const { Decoder } = require('@vaultie/lds-merkle-proof-2019')
-const decoder = new Encoder(proofValueBase58)
+const decoder = new Decoder(proofValueBase58)
 
 decoder.decode() // JSON object with proofValue
 ```
