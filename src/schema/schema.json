@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "required": [ "merkleRoot", "targetHash", "anchors" ],
+  "properties": {
+    "merkleRoot": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "targetHash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "anchors": {
+      "type": "array",
+      "minLength": 1,
+      "items": {
+        "type": "object",
+        "required": [ "txHash", "chain", "chainId" ],
+        "properties": {
+          "txHash": {
+            "type": "string",
+            "minLength": 64,
+            "maxLength": 64
+          },
+          "chain": {
+            "type": "string"
+          },
+          "chainId": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

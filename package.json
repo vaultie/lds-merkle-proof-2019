@@ -2,14 +2,19 @@
   "name": "lds-merkle-proof-2019",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
-    "multibase": "^0.6.0",
-    "cbor": "^5.0.1"
+    "ajv": "^6.10.2",
+    "cbor": "^5.0.1",
+    "encodr": "^1.2.1",
+    "lodash": "^4.17.15",
+    "multibase": "^0.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Vaultie Inc.",
   "license": "MIT"
