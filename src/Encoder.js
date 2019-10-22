@@ -35,19 +35,20 @@ class Encoder {
   }
 
   constructAnchorsMap(anchors) {
-    return anchors.map(anchor => 
-      Object.keys(anchor).map(key => {
-        let value = anchor[key]
+    return anchors.map(anchor => {
+      let values = anchor.split(':')
+      values.shift()
 
-        value = key === 'chain' 
-          ? Keymap.chain[value] 
-          : key === 'txHash' 
-            ? cbor.encode(Buffer.from(value, 'hex'))
-            : value
-
-        return [Keymap.anchors[key], value]
+      return values.map((value, index) => {
+        if (index === 0) {
+          return [index, Keymap.chain[value].id]
+        }
+        if (index === 1) {
+          return [index, Keymap.chain[values[index - 1]].networks[value]]
+        }
+        return [index, cbor.encode(Buffer.from(value, 'hex')) ]
       })
-    )
+    })
   }
 
   constructPathMap(path) {

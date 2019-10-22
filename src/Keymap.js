@@ -10,20 +10,26 @@ const path = {
   'right': 1
 }
 
-const anchors = {
-  'txHash': 0,
-  'chain': 1,
-  'chainId': 2
-}
-
 const chain = {
-  'Bitcoin': 0,
-  'Ethereum': 1
+  btc: {
+    id: 0,
+    networks: {
+      mainnet: 1,
+      testnet: 3
+    }
+  },
+  eth: {
+    id: 1,
+    networks: {
+      mainnet: 1,
+      ropsten: 3,
+      rinkeby: 4
+    }
+  }
 }
 
 module.exports = {
   root,
   path,
-  anchors,
   chain
 }

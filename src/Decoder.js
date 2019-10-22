@@ -39,25 +39,21 @@ class Decoder {
   }
 
   constructAnchorsJSON(anchors) {
-    const anchorsKeymap = _.invert(Keymap.anchors)
-    const chainKeymap = _.invert(Keymap.chain)
+    const chainKeymap = _.invertBy(Keymap.chain, (value) => value.id)
 
     return anchors.map((anchor) =>
       anchor.reduce((acc, val) => {
-        let value = val[1]
-        const key = anchorsKeymap[val[0]]
+        if (val[0] === 0) {
+          return `${acc}:${chainKeymap[val[1]]}`
+        }
+        if (val[0] === 1) {
+          const chain = acc.split(':').pop()
+          const networkKeymap = _.invert(Keymap.chain[chain].networks)
+          return `${acc}:${networkKeymap[val[1]]}`
+        }
 
-        if (value instanceof Buffer) {
-          value = cbor.decode(value).toString('hex')
-        }
-  
-        if (anchorsKeymap[val[0]] === 'chain') {
-          value = chainKeymap[value]
-        }
-        acc[anchorsKeymap[val[0]]] = value
-  
-        return acc
-      }, {})
+        return `${acc}:${cbor.decode(val[1]).toString('hex')}`
+      }, 'blink')
     )
   }
 
