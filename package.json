@@ -1,6 +1,6 @@
 {
   "name": "@vaultie/lds-merkle-proof-2019",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "LDS Merkle Proof 2019 signature suite tools",
   "keywords": ["lds-merkle-proof-2019", "verifiable credentials", "merkle-proof"],
   "repository": {
@@ -20,7 +20,8 @@
     "jest": "^24.9.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "postpublish": "npm publish --ignore-scripts --@vaultie:registry='https://registry.npmjs.org'"
   },
   "author": "Vaultie Inc.",
   "license": "MIT"
