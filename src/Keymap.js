@@ -25,6 +25,13 @@ const chain = {
       ropsten: 3,
       rinkeby: 4
     }
+  },
+  mtc: {
+    id: 2,
+    networks: {
+      mainnet: 137,
+      mumbai: 80001
+    }
   }
 }
 
