@@ -9,7 +9,7 @@ class Decoder {
     const valid = multibase.isEncoded(base58)
     if (!valid)
       throw new Error('Base58 string is invalid. Cannot construct Decoder.')
-    
+
     this.base58 = base58
   }
 
@@ -29,10 +29,10 @@ class Decoder {
         }
       }
 
-      if (value instanceof Buffer) {
+      if (value instanceof Buffer || value instanceof Uint8Array) {
         value = cbor.decode(value).toString('hex')
       }
-    
+
       acc[key] = value
       return acc
     }, {})
