@@ -24,7 +24,8 @@ const chain = {
       mainnet: 1,
       ropsten: 3,
       rinkeby: 4,
-      goerli: 5
+      goerli: 5,
+      sepolia: 11155111
     }
   },
   mtc: {
