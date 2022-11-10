@@ -34,6 +34,12 @@ const chain = {
       mainnet: 137,
       mumbai: 80001
     }
+  },
+  mocknet: {
+    id: -1,
+    networks: {
+      mocknet: -1
+    }
   }
 }
 
