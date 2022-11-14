@@ -6,6 +6,6 @@
   "merkleRoot": "3c9ee831b8705f2fbe09f8b3a92247eed88cdc90418c024924be668fdc92e781", 
   "targetHash": "c65c6184e3d5a945ddb5437e93ea312411fd33aa1def22b0746d6ecd4aa30f20",
   "anchors": [
-    "blink:btc:testnet:582733d7cef8035d87cecc9ebbe13b3a2f6cc52583fbcd2b9709f20a6b8b56b3"
+    "blink:mocknet:mocknet:d41d8cd98f00b204e9800998ecf8427e"
   ]
 }
