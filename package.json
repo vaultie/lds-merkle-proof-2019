@@ -1,6 +1,6 @@
 {
   "name": "@vaultie/lds-merkle-proof-2019",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "LDS Merkle Proof 2019 signature suite tools",
   "keywords": [
     "lds-merkle-proof-2019",
@@ -17,7 +17,9 @@
     "ajv": "^6.10.2",
     "cbor": "^5.0.1",
     "encodr": "^1.2.1",
-    "lodash": "^4.17.20",
+    "lodash.flatten": "^4.4.0",
+    "lodash.invert": "^4.3.0",
+    "lodash.invertby": "^4.7.0",
     "multibase": "^0.6.0"
   },
   "devDependencies": {

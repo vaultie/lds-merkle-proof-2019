@@ -3,14 +3,14 @@ const Keymap = require('./Keymap')
 
 const cbor = require('cbor')
 const multibase = require('multibase')
-const _ = require('lodash')
+const _flatten = require('lodash.flatten')
 
 class Encoder {
   constructor(json) {
     const valid = validate(json)
     if (!valid)
       throw new Error('JSON is invalid. Cannot construct Encoder.')
-    
+
     this.json = json
   }
 
@@ -52,7 +52,7 @@ class Encoder {
   }
 
   constructPathMap(path) {
-    return _.flatten(path.map(item => 
+    return _flatten(path.map(item =>
       Object.keys(item).map(key => [Keymap.path[key], cbor.encode(Buffer.from(item[key], 'hex'))]))
     )
   }
