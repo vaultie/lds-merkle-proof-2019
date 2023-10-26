@@ -1,6 +1,5 @@
 const schema = require('./schema.json')
-const Ajv = require('ajv')
-const ajv = new Ajv()
-const validate = ajv.compile(schema)
+const { validator } = require('@exodus/schemasafe')
+const validate = validator(schema)
 
 module.exports = validate

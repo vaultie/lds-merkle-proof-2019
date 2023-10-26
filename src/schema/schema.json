@@ -14,8 +14,8 @@
     },
     "anchors": {
       "type": "array",
-      "minLength": 1,
-      "items": {
+      "minItems": 1,
+      "contains": {
         "type": "string"
       }
     }
